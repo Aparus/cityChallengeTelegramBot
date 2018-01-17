@@ -1,0 +1,18 @@
+{
+  "name": "city-challenge-bot",
+  "version": "1.0.0",
+  "description": "inform us about issues in your city",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "babel-node index --presets=env"
+  },
+  "author": "",
+  "license": "ISC"
+}
