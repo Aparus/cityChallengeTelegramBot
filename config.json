@@ -1,3 +1,4 @@
 {
-    "token": "543841053:AAG4pAeKN5fuRf2IShLW8xFvK920-xj6_2Y"
+    "token": "543841053:AAG4pAeKN5fuRf2IShLW8xFvK920-xj6_2Y", 
+    "mongoUrl": "mongodb://localhost:27017/cityChallengeBot"
 }
