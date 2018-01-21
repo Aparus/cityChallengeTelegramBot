@@ -32,7 +32,7 @@ bot.downloadFile(
 
 bot.onText(/\/start/, (msg, [source, match]) => {
   const { chat: { id, first_name, last_name }, text } = msg;
-  const welcomeMessage = `Здравствуйте, ${first_name} ${last_name}! В этом боте вы можете сообщить о проблеме, с которой вы столкнулись в нашем городе.`;
+  const welcomeMessage = `Здравствуйте, ${first_name}! Мне Вы можете сообщить о проблеме, с которой столкнулись в нашем городе.`;
   bot.sendMessage(id, welcomeMessage);
 });
 
