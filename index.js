@@ -24,7 +24,7 @@ bot.on("message", msg => {
     return elem.userId == userId;
   })[0];
   console.log("dialog", dialog);
-  if (dialog.state >= 0) {
+  if (dialog) {
     dialog.messages.push(msg);
     bot.sendMessage(userId, scenario[dialog.state++].question);
     //
