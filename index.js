@@ -38,6 +38,7 @@ bot.on("message", msg => {
 
 bot.onText(/\/start/, (msg, [source, match]) => {
   const { chat: { id, first_name, last_name }, text } = msg;
+<<<<<<< HEAD
   const welcomeMessage = `Здравствуйте, ${first_name} ${last_name}! В этом боте вы можете сообщить о проблеме, с которой вы столкнулись в нашем городе.`;
   const opts = {
     reply_markup: {
@@ -64,6 +65,10 @@ bot.on("callback_query", query => {
     bot.sendMessage(userId, scenario[0].question);
     dialogs.push({ userId, date, state: 0, messages: [] });
   }
+=======
+  const welcomeMessage = `Здравствуйте, ${first_name}! Мне Вы можете сообщить о проблеме, с которой столкнулись в нашем городе.`;
+  bot.sendMessage(id, welcomeMessage);
+>>>>>>> 4c0bd12cf914da784cb51f50d9e21f83f4a4c972
 });
 
 bot.on("polling_error", error => {
