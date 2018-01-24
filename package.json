@@ -7,6 +7,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "mongodb": "^3.0.1",
+    "node-static": "^0.7.10",
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {},
