@@ -85,12 +85,7 @@ function deleteDialog(userId) {
     return elem.userId != userId;
   });
 }
-/* 
-  { field: "name", question: "Ваше имя" },
-  { field: "phone", question: "Телефон для связи" },
-  { field: "description", question: "Опишите ситуацию текстом или голосом" },
-  { field: "photo", question: "Добавьте фотографию" }
-*/
+
 function dialogToSituation(dialog) {
   const { id, userId, date, messages } = dialog;
   const situation = { id, userId, date };
@@ -176,90 +171,3 @@ http
       .resume();
   })
   .listen(8080);
-
-/* 
-//run http server 
-http
-.createServer(function(req, res) {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.write("Hello World!");
-    res.end();
-})
-.listen(8080);
-*/
-
-/* 
-// file download example (file_id, path)
-bot.downloadFile(
-  "AgADAgADfKgxG1s3AUtXkCcAAX5i_T93EpwOAATRd7iqqn_lvf5UAAIC",
-  "photo"
-); */
-
-/* 
-// message object example, that recievs server on event: bot.on("message", msg =>  
-
-  { message_id: 7,
-    from:
-   { id: 131455605,
-    is_bot: false,
-    first_name: 'Rustam',
-     last_name: 'Apaev',
-     username: 'aparus',
-     language_code: 'en-US' },
-     chat:
-   { id: 131455605,
-    first_name: 'Rustam',
-     last_name: 'Apaev',
-     username: 'aparus',
-     type: 'private' },
-     date: 1516191119,
-     text: 'hahaha' }
-     */
-
-/* 
-// bot sends back your message...
-bot.on("message", msg => {
-    const { chat: { id }, text } = msg;
-  console.log(msg);
-  bot.sendMessage(id, text);
-}); */
-
-/* 
-//example with force_replay
-    var opts = {
-      reply_markup: JSON.stringify({ force_reply: true })
-    };
-    // question 1
-    bot
-      .sendMessage(fromId, "Enter your phone number1", opts)
-      .then(function(sended) {
-        var chatId = sended.chat.id;
-        var messageId = sended.message_id;
-        bot.onReplyToMessage(chatId, messageId, message => {
-          order.phone1 = message.text;
-
-          // question 2
-          bot
-            .sendMessage(fromId, "Enter your phone number2", opts)
-            .then(function(sended) {
-              var chatId = sended.chat.id;
-              var messageId = sended.message_id;
-              bot.onReplyToMessage(chatId, messageId, message =>  {
-                order.phone2 = message.text;
-
-                // question 3
-                bot
-                  .sendMessage(fromId, "Enter your phone number3", opts)
-                  .then(function(sended) {
-                    var chatId = sended.chat.id;
-                    var messageId = sended.message_id;
-                    bot.onReplyToMessage(chatId, messageId, message =>  {
-                      order.phone3 = message.text;
-                      console.log("order", order);
-                    });
-                  });
-              });
-            });
-        });
-      });
-*/
